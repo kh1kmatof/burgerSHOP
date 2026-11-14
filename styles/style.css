@@ -1,0 +1,32 @@
+@import 'variable.css';
+@import 'header.css';
+@import 'main.css';
+@import 'footer.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    transition: var(--effect-2s);
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+

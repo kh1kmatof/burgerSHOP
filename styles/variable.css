@@ -1,0 +1,36 @@
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --card-bg: #f8f9fa;
+    --border-color: #dddddd;
+    --text-bg: #f2f4f6;
+    --nav-bg: #f7f9fb;
+    --text-orange: #ff6b00;
+    --effect-2s: 0.2s;
+    --header-color-bg: #eceef0;
+    --text-biege: #5a4137;
+    --shadow-white: 0px 0px 50px black;
+
+
+    /* color-logo */
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --card-bg: #1e1e1e;
+    --border-color: #333333;
+    --text-bg: #1c1f2a;
+    --nav-bg: #0a0e18;
+    --header-color-bg: #262a35;
+    --text-biege: #e2bfb0;
+    --shadow-white: 0px 0px 30px white;
+}
+
+
+.container {
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}

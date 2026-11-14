@@ -1,0 +1,30 @@
+.footer {
+    border-top: 1px solid var(--text-bg);
+    transition: var(--effect-2s);
+    margin-top: 60px;
+}
+
+.footer_links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.kh1kmatof {
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-biege);
+    transition: var(--effect-2s);
+    margin-bottom: 10px;
+}
+
+.kh1kmatof a {
+    transition: var(--effect-2s);
+    color: var(--text-orange);
+}
+
+.footer-text {
+    transition: var(--effect-2s);
+    color: var(--text-biege);
+}
