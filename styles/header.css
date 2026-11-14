@@ -92,32 +92,34 @@
 .nav_links {
     display: flex;
     gap: 24px;
+    position: relative;
+}
+
+.nav_links::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: var(--after-left, 0px);
+    width: var(--after-width, 0px);
+    height: 2px;
+    border-radius: 10px;
+    background: var(--text-orange);
+    transition: left 0.3s ease, width 0.3s ease;
 }
 
 .nav_links-link {
     cursor: pointer;
     color: var(--text-color);
-    transition: var(--effect-2s);
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
-    transition: 0.1s;
-    position: relative;
+    transition: 0.2s;
 }
 
-.nav_links-link:hover {
+/* 5. Hover bo'lganda va active bo'lganda matn rangi to'q sariq bo'ladi */
+.nav_links-link:hover,
+.nav_links-link.active {
     color: var(--text-orange);
-}
-
-.nav_links-link.active::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 10px;
-    background: var(--text-orange);
-    left: 0;
-    bottom: -5px;
 }
 
 .nav_buttons {
@@ -237,26 +239,6 @@
     display: flex;
     gap: 15px;
     margin-top: 6px;
-}
-
-.header__buttons-button {
-    padding: 16px 32px;
-    font-weight: 700;
-    background: var(--text-bg);
-    border-radius: 50px;
-    color: var(--text-color);
-    transition: var(--effect-2s);
-}
-
-.header__buttons-button:hover {
-    background: var(--text-orange);
-    box-shadow: 0px 0px 10px var(--text-orange);
-    color: #572000;
-}
-
-.header__div_arrows {
-    display: flex;
-    gap: 8px;
 }
 
 .header__arrows-button {
@@ -435,4 +417,67 @@
 
 .header__bottom-btn:hover svg {
     margin-top: 5px;
+}
+
+
+.header__buttons-button {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 14px; /* Tugma shriftini o'z holiga qaytardik */
+    font-weight: 700;
+    background: var(--text-bg);
+    border-radius: 50px;
+    color: var(--text-color);
+    transition: var(--effect-2s);
+}
+
+.header__buttons-button:hover {
+    background: var(--text-orange);
+    box-shadow: 0px 0px 10px var(--text-orange);
+    color: #572000;
+}
+
+#heroPrice {
+    color: var(--text-orange);
+    transition: 0.2s;
+}
+
+.header__buttons-button:hover #heroPrice {
+    color: #572000;
+}
+
+/* To'g'ri yo'nalishda yuruvchi slide animatsiyasi */
+.hero-animate {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hero-animate.to-left {
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.hero-animate.to-right {
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.header__div_arrows {
+    display: flex;
+    align-items: center; /* Tugmalar va yozuvni bir chiziqqa tekislaydi */
+    gap: 12px;
+}
+
+.header__arrows-count {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-biege);
+    margin-left: 6px;
+    letter-spacing: 0.5px;
+}
+
+.header__arrows-count span {
+    color: var(--text-orange);
+    font-size: 16px;
 }

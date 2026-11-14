@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" fill="none">
+  <defs>
+    <!-- Chap devor qirqimi -->
+    <clipPath id="leftWallClip">
+      <path d="M146 126 Q164 134 181 140 Q198 148 214 156 L212 200 Q187 184 162 168 Z" />
+    </clipPath>
+
+    <!-- O'ng devor qirqimi -->
+    <clipPath id="rightWallClip">
+      <path d="M214 156 Q231 146 248 135 Q263 119 278 103 L266 166 Q239 183 212 200 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- 1. LIKOPCHA (PLATE) -->
+  <g id="plate">
+    <!-- Likopchaning pastki qalin qirrasi -->
+    <ellipse cx="205" cy="182" rx="132" ry="85" fill="#B55D2B" />
+    <!-- Likopchaning asosiy ustki qismi -->
+    <ellipse cx="205" cy="172" rx="132" ry="83" fill="#F4BA76" />
+    <!-- Likopcha ichki chuqurligi va soyasi -->
+    <ellipse cx="205" cy="173" rx="117" ry="72" fill="#C97D38" />
+    <ellipse cx="208" cy="175" rx="114" ry="70" fill="#E8A156" />
+  </g>
+
+  <!-- 2. QOG'OZNING LIKOPCHAGA TUSHGAN SOYASI -->
+  <path d="M212 200 L266 166 L292 152 Q284 132 268 124 L212 165 Z" fill="#B86B32" opacity="0.55" />
+
+  <!-- 3. BO'SH BURGER QOG'OZI (WRAPPER) -->
+  <g id="burger-wrapper">
+    <!-- Ichki orqa-chap qism (jigarrang kraft qog'oz) -->
+    <path d="M146 126 L166 94 L188 90 L212 72 L210 138 L162 168 Z" fill="#D58B5B" />
+    <path d="M188 90 L212 72 L210 138 L186 152 Z" fill="#C47848" />
+
+    <!-- Ichki orqa-o'ng qism (och qaymoqrang buklangan qog'oz) -->
+    <path d="M212 72 L226 96 L240 86 L254 100 L278 103 L266 166 L210 138 Z" fill="#F7E4C6" />
+    <!-- Buklangan joy soyalari -->
+    <path d="M212 72 L226 96 L223 145 L210 138 Z" fill="#E5C59A" />
+    <path d="M240 86 L254 100 L248 156 L236 150 Z" fill="#EAD0A8" />
+
+    <!-- Qog'ozning ichki tubi -->
+    <path d="M162 168 L210 138 L266 166 L212 200 Z" fill="#E3A370" />
+    <path d="M162 168 L210 138 L212 200 Z" fill="#D48E59" />
+    <!-- Tubidagi mayda kunjutlar -->
+    <ellipse cx="215" cy="166" rx="2.2" ry="1.2" transform="rotate(-15 215 166)" fill="#B56B38" />
+    <ellipse cx="222" cy="171" rx="1.8" ry="1" transform="rotate(20 222 171)" fill="#B56B38" />
+
+    <!-- TASHQI CHAP DEVOR (Qizil-oq katakli) -->
+    <g clip-path="url(#leftWallClip)">
+      <rect x="140" y="120" width="85" height="90" fill="#FAF0E1" />
+      <!-- Perspektivaga moslashtirilgan kataklar -->
+      <g transform="translate(144, 124) matrix(14, 5.6, 4.5, 14, 0, 0)" fill="#D94B38">
+        <rect x="0" y="0" width="1" height="1" />
+        <rect x="2" y="0" width="1" height="1" />
+        <rect x="4" y="0" width="1" height="1" />
+        <rect x="1" y="1" width="1" height="1" />
+        <rect x="3" y="1" width="1" height="1" />
+        <rect x="0" y="2" width="1" height="1" />
+        <rect x="2" y="2" width="1" height="1" />
+        <rect x="4" y="2" width="1" height="1" />
+        <rect x="1" y="3" width="1" height="1" />
+        <rect x="3" y="3" width="1" height="1" />
+      </g>
+    </g>
+
+    <!-- TASHQI O'NG DEVOR (Soyadagi qizil-oq katakli) -->
+    <g clip-path="url(#rightWallClip)">
+      <rect x="210" y="100" width="75" height="105" fill="#EAD5B7" />
+      <!-- Perspektivaga moslashtirilgan kataklar -->
+      <g transform="translate(213, 154) matrix(14, -11.2, -3, 14.5, 0, 0)" fill="#C23B2B">
+        <rect x="0" y="0" width="1" height="1" />
+        <rect x="2" y="0" width="1" height="1" />
+        <rect x="4" y="0" width="1" height="1" />
+        <rect x="1" y="1" width="1" height="1" />
+        <rect x="3" y="1" width="1" height="1" />
+        <rect x="0" y="2" width="1" height="1" />
+        <rect x="2" y="2" width="1" height="1" />
+        <rect x="4" y="2" width="1" height="1" />
+        <rect x="1" y="3" width="1" height="1" />
+        <rect x="3" y="3" width="1" height="1" />
+      </g>
+    </g>
+  </g>
+
+  <!-- 4. USHOQLAR VA KUNJUT URUG'LARI (SESAME SEEDS) -->
+  <g id="crumbs-and-seeds">
+    <!-- Kichik non ushog'i -->
+    <path d="M148 180 L153 175 L159 177 L161 182 L154 184 Z" fill="#C47335" />
+    <path d="M148 178 L153 173 L159 175 L160 179 L154 181 Z" fill="#F2B36B" />
+
+    <!-- Likopcha ichidagi kunjutlar -->
+    <ellipse cx="139" cy="164" rx="3" ry="1.6" transform="rotate(15 139 164)" fill="#FFF5DC" stroke="#B87638" stroke-width="0.6" />
+    <ellipse cx="142" cy="187" rx="3.2" ry="1.7" transform="rotate(-12 142 187)" fill="#FFF5DC" stroke="#B87638" stroke-width="0.6" />
+    <ellipse cx="166" cy="183" rx="2.4" ry="1.3" transform="rotate(35 166 183)" fill="#FFF5DC" stroke="#B87638" stroke-width="0.6" />
+    <ellipse cx="161" cy="194" rx="3" ry="1.6" transform="rotate(-25 161 194)" fill="#FFF5DC" stroke="#B87638" stroke-width="0.6" />
+    <ellipse cx="185" cy="195" rx="3.4" ry="1.8" transform="rotate(-10 185 195)" fill="#FFF5DC" stroke="#B87638" stroke-width="0.6" />
+    <ellipse cx="234" cy="196" rx="3.3" ry="1.7" transform="rotate(8 234 196)" fill="#FFF5DC" stroke="#B87638" stroke-width="0.6" />
+
+    <!-- Likopcha tashqarisiga to'kilgan kunjutlar -->
+    <ellipse cx="108" cy="202" rx="3.4" ry="1.8" transform="rotate(-10 108 202)" fill="#F7E4C6" stroke="#B87638" stroke-width="0.7" />
+    <ellipse cx="120" cy="214" rx="3.2" ry="1.7" transform="rotate(20 120 214)" fill="#F7E4C6" stroke="#B87638" stroke-width="0.7" />
+    <ellipse cx="113" cy="224" rx="3.5" ry="1.8" transform="rotate(-22 113 224)" fill="#F7E4C6" stroke="#B87638" stroke-width="0.7" />
+    <ellipse cx="127" cy="220" rx="3.3" ry="1.7" transform="rotate(-8 127 220)" fill="#F7E4C6" stroke="#B87638" stroke-width="0.7" />
+  </g>
+</svg>

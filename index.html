@@ -57,37 +57,42 @@
                         <p class="header__about-text">NOCTURNAL CULINARY ALCHEMY</p>
                         <p class="header__about-year"> EST . 2026</p>
                     </div>
-                    <div class="header__div_title">
-                        <h1 class="header__title-first">CRAFTED BURGERS.</h1>
-                        <h1 class="header__title-second">UNFORGETTABLE BITES.</h1>
+                    <div class="header__div_title hero-animate">
+                        <h1 class="header__title-first" id="heroTitleFirst">CRAFTED BURGERS.</h1>
+                        <h1 class="header__title-second" id="heroTitleSecond">UNFORGETTABLE BITES.</h1>
                     </div>
-                    <p class="header__div-text">
+                    <p class="header__div-text hero-animate" id="heroText">
                         100% Angus smash beef, golden butter brioche, house-whipped
                         black truffle aioli, melted 24-month aged cheddar, and artisanal
                         smoked relish seared at 600°F.
                     </p>
                     <div class="header__div_buttons">
-                        <button class="header__buttons-button">Explore Full Menu</button>
-                        <button class="header__buttons-button">Order Now • 15 Min Delivery</button>
+                        <a href="#menu" class="header__buttons-button">Explore Full Menu</a>
+                        <a href="#order" class="header__buttons-button">
+                            Order Now • <span id="heroPrice">$15</span> • 15 Min Delivery
+                        </a>
                     </div>
                     <div class="header__div_arrows">
-                        <button class="header__arrows-button"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                height="32"
-                                viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                        <button class="header__arrows-button" id="heroPrevBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="currentColor"
                                     d="m10.8 12l3.9 3.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275l-4.6-4.6q-.15-.15-.212-.325T8.425 12t.063-.375t.212-.325l4.6-4.6q.275-.275.7-.275t.7.275t.275.7t-.275.7z" />
-                            </svg></button>
-                        <button class="header__arrows-button"><svg xmlns="http://www.w3.org/2000/svg" width="32"
-                                height="32"
-                                viewBox="0 0 24 24"><!-- Icon from Material Symbols by Google - https://github.com/google/material-design-icons/blob/master/LICENSE -->
+                            </svg>
+                        </button>
+                        <button class="header__arrows-button" id="heroNextBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                                 <path fill="currentColor"
                                     d="M12.6 12L8.7 8.1q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.6 4.6q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7z" />
-                            </svg></button>
+                            </svg>
+                        </button>
+
+                        <!-- Slayd raqamini ko'rsatuvchi matn -->
+                        <p class="header__arrows-count" id="heroSlideCount"><span>1</span>/4 products</p>
                     </div>
                 </div>
 
                 <div class="header__img">
-                    <img class="header-img" src="images/header.png" alt="">
+                    <img class="header-img hero-animate" id="heroImg" src="images/header.png" alt="">
                     <div class="header__img_div">
                         <svg class="header__div-fire" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                             viewBox="0 0 24 24"><!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE -->
@@ -190,9 +195,11 @@
                         </div>
                     </div> -->
                 </div>
-                <p class="none-result">
-                    Hech narsa topilmadi
-                </p>
+                <div class="none_result">
+                    <img src="images/no-results.svg" alt="No results found" width="260">
+                    <h3>NO RESULTS FOUND</h3>
+                    <p>Looks like they're all gone! Try searching for something else.</p>
+                </div>
             </div>
         </section>
     </main>

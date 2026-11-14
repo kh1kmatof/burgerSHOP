@@ -217,16 +217,30 @@
     border-radius: 9999px;
     font-size: 20px;
     font-weight: 700;
+    padding: 8px;
 }
 
+.menu__card-add svg {
+    color: #fff;
+}
+
+
+.none_result {
+    display: none;
+    height: 60vh;
+    color: var(--text-color);
+}
 
 .none-result {
     color: var(--text-color);
     font-size: 20px;
     text-align: center;
-    display: none;
 }
 
-.none-result.active {
-    display: block;
+.none_result.active {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
