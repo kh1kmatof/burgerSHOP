@@ -227,7 +227,12 @@
 
 .none_result {
     display: none;
-    height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 40px 0;
     color: var(--text-color);
 }
 

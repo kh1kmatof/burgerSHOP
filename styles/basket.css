@@ -1,0 +1,215 @@
+.basket-page {
+    padding-top: 120px;
+    min-height: 85vh;
+}
+
+.basket_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 30px;
+    align-items: start;
+    margin-top: 30px;
+}
+
+.basket_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.basket_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: var(--text-bg);
+    padding: 16px 20px;
+    border-radius: 20px;
+    transition: var(--effect-2s);
+}
+
+.basket_item-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.basket_item-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.basket_item-title {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.basket_item-unit {
+    color: var(--text-biege);
+    font-size: 14px;
+}
+
+.basket_item-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+.basket_qty-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: var(--text-orange);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.basket_qty-btn:hover {
+    opacity: 0.85;
+}
+
+.basket_item-count {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.basket_item-total {
+    color: var(--text-orange);
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 70px;
+    text-align: right;
+}
+
+.basket_item-remove {
+    background: transparent;
+    border: none;
+    color: var(--text-biege);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 6px;
+    transition: 0.2s;
+}
+
+.basket_item-remove:hover {
+    color: #ff4d4d;
+}
+
+/* O'ng tomondagi Order Summary qutisi */
+.basket_summary {
+    background: var(--text-bg);
+    padding: 25px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.basket_summary-title {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+.basket_summary-row {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-biege);
+    font-size: 15px;
+}
+
+.free-delivery {
+    color: #2ecc71;
+    font-weight: 700;
+}
+
+.basket_summary-total {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 700;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 14px;
+}
+
+.basket_summary-total span:last-child {
+    color: var(--text-orange);
+}
+
+.basket_checkout-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    background: var(--text-orange);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.basket_checkout-btn:hover {
+    opacity: 0.9;
+}
+
+.basket_clear-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: var(--text-biege);
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.basket_clear-btn:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+}
+
+/* Bo'sh natija oynasi to'g'rilangan holati */
+.none_result {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+    padding: 50px 0;
+}
+
+@media (max-width: 900px) {
+    .basket_wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .basket_item {
+        flex-wrap: wrap;
+    }
+}

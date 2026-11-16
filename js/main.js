@@ -4,7 +4,7 @@ import { renderProducts } from './functions/render.js'
 import { initFilters } from './functions/filter.js'
 import { initScrollSpy } from './functions/scroll.js'
 import { initHeroSlider } from './functions/slider.js'
-
+import { updateBasketBadge } from './functions/basket.js' // main.js da './functions/basket.js'
 
 // 1. Tungi va kunduzgi rejimni ishga tushiramiz
 initTheme()
@@ -18,3 +18,5 @@ initFilters()
 initScrollSpy()
 
 initHeroSlider()
+
+updateBasketBadge()
