@@ -1,5 +1,8 @@
 import { products } from './products.js'
+import { addToBasket } from './basket.js'
 
+// Oddiy function ko'rinishi:
+// export function initHeroSlider() { ... }
 export const initHeroSlider = () => {
     let heroProducts = products.slice(0, 4)
     let currentIndex = 0
@@ -11,11 +14,14 @@ export const initHeroSlider = () => {
     let heroPrice = document.querySelector('#heroPrice')
     let heroImg = document.querySelector('#heroImg')
     let slideCount = document.querySelector('#heroSlideCount')
+    let orderBtn = document.querySelector('#heroOrderBtn') // Order Now tugmasi
 
     let prevBtn = document.querySelector('#heroPrevBtn')
     let nextBtn = document.querySelector('#heroNextBtn')
     let animatedElements = document.querySelectorAll('.hero-animate')
 
+    // Oddiy function ko'rinishi:
+    // function updateHeroContent() { ... }
     const updateHeroContent = () => {
         let currentItem = heroProducts[currentIndex]
         if (!currentItem) return
@@ -43,6 +49,8 @@ export const initHeroSlider = () => {
         }
     }
 
+    // Oddiy function ko'rinishi:
+    // function changeSlide(direction) { ... }
     const changeSlide = (direction) => {
         animatedElements.forEach((el) => {
             if (direction === 'next') {
@@ -77,6 +85,8 @@ export const initHeroSlider = () => {
         }, 250)
     }
 
+    // Oddiy function ko'rinishi:
+    // function goNext() { ... }
     const goNext = () => {
         currentIndex++
 
@@ -87,6 +97,8 @@ export const initHeroSlider = () => {
         changeSlide('next')
     }
 
+    // Oddiy function ko'rinishi:
+    // function goPrev() { ... }
     const goPrev = () => {
         currentIndex--
 
@@ -97,6 +109,8 @@ export const initHeroSlider = () => {
         changeSlide('prev')
     }
 
+    // Oddiy function ko'rinishi:
+    // function startAutoPlay() { ... }
     const startAutoPlay = () => {
         clearInterval(autoPlayInterval)
 
@@ -119,6 +133,24 @@ export const initHeroSlider = () => {
         prevBtn.addEventListener('click', () => {
             goPrev()
             startAutoPlay()
+        })
+    }
+
+    // Order Now tugmasi bosilganda aynan hozirgi slayddagi mahsulotni savatchaga qo'shish
+    if (orderBtn) {
+        orderBtn.addEventListener('click', () => {
+            let currentItem = heroProducts[currentIndex]
+            if (!currentItem) return
+
+            addToBasket(currentItem.id)
+
+            // Tugma bosilganini foydalanuvchiga bildirish
+            orderBtn.innerHTML = `Added to Basket ✓`
+            setTimeout(() => {
+                orderBtn.innerHTML = `Order Now • <span id="heroPrice">$${currentItem.price}</span> • 15 Min Delivery`
+                // Ichidagi span yangilanganligi uchun o'zgaruvchini qayta bog'laymiz
+                heroPrice = document.querySelector('#heroPrice')
+            }, 800)
         })
     }
 }
